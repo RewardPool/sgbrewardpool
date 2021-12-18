@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sgbrewardpool/static/css/main.8e22a700.css",
+    "main.js": "/sgbrewardpool/static/js/main.f68b8c8a.js",
+    "static/js/787.b72eca91.chunk.js": "/sgbrewardpool/static/js/787.b72eca91.chunk.js",
+    "index.html": "/sgbrewardpool/index.html",
+    "main.8e22a700.css.map": "/sgbrewardpool/static/css/main.8e22a700.css.map",
+    "main.f68b8c8a.js.map": "/sgbrewardpool/static/js/main.f68b8c8a.js.map",
+    "787.b72eca91.chunk.js.map": "/sgbrewardpool/static/js/787.b72eca91.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e22a700.css",
+    "static/js/main.f68b8c8a.js"
+  ]
+}
