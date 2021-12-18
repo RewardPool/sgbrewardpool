@@ -7,6 +7,8 @@ const Content = () => {
         <div id={'content'}>
             <div id={'announcement'}>
                 <h2>Coming Soon!</h2>
+                <a href="https://twitter.com/RewardPool" className="twitter-follow-button"
+                   data-show-count="false">Follow @RewardPool</a>
                 <p>RewardPool will be launching two Proof-of-Concept raffles in the coming
                    weeks.</p>
                 <p class={'bold'}>Win up to 9,999x normal delegation rewards!</p>
