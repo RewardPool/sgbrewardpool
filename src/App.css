@@ -94,3 +94,8 @@ ul {
   width: 95%;
   margin: auto;
 }
+
+#footer {
+  text-align: center;
+  font-size: smaller;
+}

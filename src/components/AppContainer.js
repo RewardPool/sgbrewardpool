@@ -3,6 +3,7 @@ import Roadmap from "./Roadmap"
 import Header from "./Header"
 import Content from "./Content"
 import Faq from "./Faq"
+import Footer from "./Footer"
 
 class AppContainer extends React.Component {
     state = {
@@ -40,6 +41,9 @@ class AppContainer extends React.Component {
                 <Content />
                 <Faq />
                 <Roadmap roadmap={this.state.roadmap} />
+                <br/>
+                <br/>
+                <Footer />
             </div>
         );
     }
