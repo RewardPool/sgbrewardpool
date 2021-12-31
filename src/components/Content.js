@@ -55,6 +55,8 @@ const Content = () => {
                    higher rewards, and may be compensated in other ways by the raffle
                    organizer.</p>
                 <br/>
+                <p>Participants can burn their ticket to reclaim SGB at any time!</p>
+                <br/>
                 <p>This is a great way for new FTSO providers to gain delegates quickly!</p>
                 <br/>
                 <p style={{textAlign: "center"}}>GitHub Link Coming Soon.</p>
