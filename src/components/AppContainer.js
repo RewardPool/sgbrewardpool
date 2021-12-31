@@ -10,25 +10,31 @@ class AppContainer extends React.Component {
         roadmap: [
             {
                 id: 1,
-                title: "Pink Proof-of-Concept Raffle",
-                time: "January 2022",
+                title: "Pink Raffle",
+                time: "January 19, 2022",
                 completed: false
             },
             {
                 id: 2,
-                title: "Yellow Proof-of-Concept Raffle",
-                time: "2-3 weeks after Pink Raffle sells out",
+                title: "Launch Stake-to-Earn SRP Rewards",
+                time: "February 6, 2022",
                 completed: false
             },
             {
                 id: 3,
                 title: "Launch RewardPool FTSO",
-                time: "End of Q1 2022",
+                time: "Feb/March 2022",
                 completed: false
             },
             {
                 id: 4,
-                title: "Launch RewardPool Protocol and Governance Token",
+                title: "Yellow Raffle",
+                time: "Feb/March 2022",
+                completed: false
+            },
+            {
+                id: 5,
+                title: "First Governance Town Hall",
                 time: "Q2 2022",
                 completed: false
             }
@@ -36,14 +42,10 @@ class AppContainer extends React.Component {
     };
     render() {
         return (
-            <div id={'container'}>
-                <Header />
+            <div>
                 <Content />
                 <Faq />
                 <Roadmap roadmap={this.state.roadmap} />
-                <br/>
-                <br/>
-                <Footer />
             </div>
         );
     }

@@ -5,9 +5,9 @@ function RoadmapItem(props) {
     return (
         <li>
             <div className={'ticket'}>
-                <img src={image} alt={'Songbird Raffle Ticket'} />
-                <span>{props.todo.time} <br/>
-                <span className={'timeline'}>{props.todo.title}</span></span>
+                <img src={image} className={'raffle'} alt={'Songbird Raffle Ticket'} />
+                <span><span className={'timeline'}>{props.todo.time}</span> <br/>
+                {props.todo.title}</span>
             </div>
         </li>
     )
