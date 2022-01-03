@@ -1,5 +1,6 @@
 import React from "react"
 import discord from "../images/discord.png";
+import {Link} from "react-router-dom";
 
 class Header extends React.Component {
     render() {
@@ -19,8 +20,8 @@ class Header extends React.Component {
                     </a>
                     <p>RewardPool will be releasing open-source protocols that anyone can use
                        to build innovative projects on the Songbird and Flare Networks.</p> <br/>
-                    <p>These protocols will be tested in the coming weeks, starting with the
-                       FREE Pink Raffle.</p>
+                    <p>These protocols will be tested in the coming weeks, starting with the&nbsp;
+                        <Link to="/pink">FREE Pink Raffle.</Link></p>
                 </div>
                 <br/>
             </div>

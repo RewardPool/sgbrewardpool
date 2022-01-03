@@ -177,7 +177,10 @@ class PinkRaffle extends React.Component {
                 $("span#pinkError").text(`${error.data.message}`);
             }
         }
-        checkIfWalletIsConnected();
+        $(function() {
+            checkIfWalletIsConnected();
+        });
+
         return (
             <div id={'pinkRaffle'}>
                 <h2>Pink Raffle</h2>
