@@ -1,7 +1,6 @@
 import React from "react"
 import $ from "jquery"
 import { ethers } from "ethers";
-import Sidebar from "./Sidebar";
 
 $(function() {
     //checkWeb3();

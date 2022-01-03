@@ -246,11 +246,42 @@ header {
   padding: 5px;
 }
 
+#mint {
+  width: 95%;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  border: 2px black solid;
+  border-radius: 5px;
+  font-size: small;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+#mintButton {
+    width: 100px;
+}
+
+#myPink {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    border: 2px black dotted;
+}
+
+#claimButton {
+  width: 50px;
+}
+
+.address {
+  font-size: .65em;
+}
 
 @media only screen and (min-width: 350px) {
   .bm-burger-button {
     left: 11%;
   }
+
 }
 
 @media only screen and (min-width: 450px) {
@@ -258,6 +289,9 @@ header {
     left: 12%;
   }
 
+  .address {
+    font-size: small;
+  }
 }
 
 @media only screen and (min-width: 550px) {
@@ -281,4 +315,17 @@ header {
   .protocol {
     font-size: medium;
   }
+
+  #mint {
+    font-size: medium;
+  }
+
+  #pinkError {
+    color: red;
+  }
+
+  .address {
+    font-size: medium;
+  }
+
 }
