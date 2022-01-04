@@ -38,17 +38,14 @@ class PinkRaffle extends React.Component {
                 connectedAccount = accounts[0];
                 console.log("Found an authorized account:", account);
                 $("button#mintButton").prop('disabled', false);
+                $("span#pinkError").text("");
                 getMinted();
                 getOwned();
                 /*getWinners()*/
                 getCollectable();
             } else {
                 console.log("No authorized account found");
-                $("span#pinkError").text("Connect your wallet and refresh.");
-                $("button#mintButton").prop('disabled', true);
-                $("button#claimButton").prop('disabled', true);
-                $("div.myTickets").html("<p>You don't own any tickets!</p>");
-                $("p#pinkClaimable").text(`0 SGB`);
+
             }
         }
 
@@ -178,6 +175,11 @@ class PinkRaffle extends React.Component {
             }
         }
         $(function() {
+            $("span#pinkError").text("Connect your wallet and refresh.");
+            $("button#mintButton").prop('disabled', true);
+            $("button#claimButton").prop('disabled', true);
+            $("div.myTickets").html("<p>You don't own any tickets!</p>");
+            $("p#pinkClaimable").text(`0 SGB`);
             checkIfWalletIsConnected();
         });
 
