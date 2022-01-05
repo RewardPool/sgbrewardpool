@@ -2,12 +2,15 @@ import React from "react"
 import { ethers } from "ethers";
 import NFT from '../nft-abi.json';
 import RAFFLE from '../raffle-abi.json';
+import WNAT from '../wnat-abi.json';
 import pink from '../images/sgbticket.png';
 import $ from "jquery";
 
 const NFT_ADDRESS = "0xAD8fC70Af4d8DEC3E80F203Eade3cCeC3dbd5114";
 
-const RAFFLE_ADDRESS = "0x0B0ffb2Cd00E46cBC9DC74Ba9ff7FCF0742B7790";
+const RAFFLE_ADDRESS = "0xe4AE30D4124EcF4e3297Fa39019a3AFC5130520D";
+
+const WNAT_ADDRESS = "0x02f0826ef6aD107Cfc861152B32B52fD11BaB9ED";
 
 class PinkRaffle extends React.Component {
     render() {
@@ -41,7 +44,9 @@ class PinkRaffle extends React.Component {
                 $("span#pinkError").text("");
                 getMinted();
                 getOwned();
-                /*getWinners()*/
+                getWnatBalance();
+                getWinners();
+                getLastReward();
                 getCollectable();
             } else {
                 console.log("No authorized account found");
@@ -63,6 +68,20 @@ class PinkRaffle extends React.Component {
             if (nMinted === 500) {
                 $("button#mintButton").prop('disabled', true);
             }
+        }
+
+        const getWnatBalance = async () => {
+            const { ethereum } = window;
+
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            const connectedContract = new ethers.Contract(WNAT_ADDRESS, WNAT, signer);
+
+            let balance = await connectedContract.balanceOf(`${RAFFLE_ADDRESS}`);
+            balance = (balance/(10**18)).toFixed(6);
+
+            $("span#totalDelegated").text(`${balance}`);
+
         }
 
         const getOwned = async () => {
@@ -106,6 +125,19 @@ class PinkRaffle extends React.Component {
             } else {
                 $("span#pinkWinners").text(`No winners yet!`);
             }
+        }
+
+        const getLastReward = async () => {
+            const { ethereum } = window;
+
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            const connectedContract = new ethers.Contract(RAFFLE_ADDRESS, RAFFLE, signer);
+
+            let lastReward = await connectedContract.seeLastReward();
+            lastReward = (lastReward/(10**18)).toFixed(6);
+
+            $("span#lastReward").text(`${lastReward}`);
         }
 
         const getCollectable = async () => {
@@ -197,7 +229,7 @@ class PinkRaffle extends React.Component {
                 </p>
                 <p>Raffle Address:<br/>
                     <span className={'address'}>
-                        Coming Soon...
+                        0xe4AE30D4124EcF4e3297Fa39019a3AFC5130520D
                     </span>
                 </p>
                 <br/>

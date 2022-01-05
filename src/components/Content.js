@@ -2,6 +2,7 @@ import React from "react"
 import pink from '../images/sgbticket.png'
 import yellow from '../images/sgbticket-yellow.png'
 import coin from '../images/srp-coin.png'
+import git from '../images/github.png'
 
 const Content = () => {
     return (
@@ -22,7 +23,9 @@ const Content = () => {
                 <br/>
                 <p>End the raffle and reclaim your funds at any time!</p>
                 <br/>
-                <p style={{textAlign: "center"}}>GitHub Link Coming Soon.</p>
+                <a href="https://github.com/RewardPool/RewardRaffle" target="_blank" rel="noreferrer">
+                    <img src={git} alt={'GitHub'} className={'gitLink'}/>
+                </a>
             </div>
             <br/>
             <div className={'protocol'}>

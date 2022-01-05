@@ -153,6 +153,11 @@ header {
   padding: 0;
 }
 
+.gitLink {
+  width: 64px;
+  height: 64px;
+}
+
 #connectButton {
   height: 30px;
   width: 110px;
