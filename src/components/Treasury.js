@@ -152,7 +152,7 @@ class Treasury extends React.Component {
                     </form>
                 </div>
                 <br/>
-                <a href="https://github.com/RewardPool/RewardRaffle" target="_blank" rel="noreferrer">
+                <a href="https://github.com/RewardPool/Treasury" target="_blank" rel="noreferrer">
                     <img src={git} alt={'GitHub'} className={'gitLink'}/>
                 </a>
             </div>
