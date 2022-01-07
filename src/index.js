@@ -11,6 +11,7 @@ import PinkRaffle from "./components/PinkRaffle";
 import YellowRaffle from "./components/YellowRaffle";
 import Stake from "./components/Stake";
 import SRP from "./components/SRP";
+import Treasury from "./components/Treasury";
 import Footer from "./components/Footer";
 
 function App() {
@@ -38,6 +39,7 @@ ReactDOM.render(
                 <Route path="yellow" element={<YellowRaffle />} />
                 <Route path="stake" element={<Stake />} />
                 <Route path="srp" element={<SRP />} />
+                <Route path="treasury" element={<Treasury />} />
             </Routes>
             <br/>
             <br/>

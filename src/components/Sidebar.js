@@ -30,6 +30,7 @@ class Sidebar extends React.Component {
                 <Link onClick={() => this.closeMenu()} to="/yellow">Yellow Raffle</Link>
                 <Link onClick={() => this.closeMenu()} to="/stake">Stake-to-Earn</Link>
                 <Link onClick={() => this.closeMenu()} to="/srp">SRP</Link>
+                <Link onClick={() => this.closeMenu()} to="/treasury">Treasury / Donate</Link>
                 <HashLink onClick={() => this.closeMenu()} to="/#faq">FAQ</HashLink>
             </Menu>
         );

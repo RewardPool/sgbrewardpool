@@ -3,8 +3,7 @@ import $ from "jquery"
 import { ethers } from "ethers";
 
 $(function() {
-    //checkWeb3();
-    $("button#connectButton").prop('disabled', true);
+    checkWeb3();
     $("button#connectButton").on("click", connect);
 })
 
@@ -36,8 +35,9 @@ async function checkWeb3() {
             await signer.getAddress()
             await checkNetwork()
             await checkAccount()
+            $("button#connectButton").html('Connected');
+            $("button#connectButton").prop('disabled', true);
         } catch (err) {
-            // if not already connected, show the connect button
             console.log(err)
         }
     } else {

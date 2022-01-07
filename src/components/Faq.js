@@ -35,7 +35,8 @@ const Faq = () => {
             <p>Everyone is encouraged to promote and contribute to RewardPool in any way they
                can. Join the &nbsp; <a href="https://discord.gg/js5ruFtW" target="_blank" rel="noreferrer">
                Discord</a> &nbsp;, contribute to the protocols on GitHub, or participate in the
-               protocols to help grow our treasury.</p>
+               protocols to help grow our treasury. You can also donate&nbsp;
+                <Link to="/treasury">Here.</Link></p>
             <br/>
         </div>
     )

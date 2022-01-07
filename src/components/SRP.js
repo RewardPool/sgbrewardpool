@@ -42,14 +42,14 @@ class SRP extends React.Component {
                     <li>
                         <div className={'ticket'}>
                             <img src={coin} className={'raffle'} alt={'SRP Coin'} />
-                            <span>Treasury: 3,500,000 (35%)</span>
+                            <span>Treasury: 3,000,000 (30%)</span>
                         </div>
                     </li>
                     <br/>
                     <li>
                         <div className={'ticket'}>
                             <img src={coin} className={'raffle'} alt={'SRP Coin'} />
-                            <span>Community: 5,000,000 (50%)</span>
+                            <span>Community: 5,500,000 (50%)</span>
                         </div>
                     </li>
                 </ul>

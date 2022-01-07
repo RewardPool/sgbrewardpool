@@ -8,7 +8,7 @@ import $ from "jquery";
 
 const NFT_ADDRESS = "0xAD8fC70Af4d8DEC3E80F203Eade3cCeC3dbd5114";
 
-const RAFFLE_ADDRESS = "0xe4AE30D4124EcF4e3297Fa39019a3AFC5130520D";
+const RAFFLE_ADDRESS = "0x95E1B472304f4A07522Ef9B4e2672811F7657B06";
 
 const WNAT_ADDRESS = "0x02f0826ef6aD107Cfc861152B32B52fD11BaB9ED";
 
@@ -40,14 +40,14 @@ class PinkRaffle extends React.Component {
                 const account = accounts[0];
                 connectedAccount = accounts[0];
                 console.log("Found an authorized account:", account);
-                $("button#mintButton").prop('disabled', false);
-                $("span#pinkError").text("");
                 getMinted();
                 getOwned();
                 getWnatBalance();
                 getWinners();
                 getLastReward();
                 getCollectable();
+                $("button#mintButton").prop('disabled', false);
+                $("span#pinkError").text("");
             } else {
                 console.log("No authorized account found");
 
@@ -199,7 +199,7 @@ class PinkRaffle extends React.Component {
                     getOwned();
                 } else {
                     console.log("Ethereum object doesn't exist!");
-                    $("span#pinkError").text("Error minting");
+                    $("span#pinkError").text("Connect wallet and refresh!");
                 }
             } catch (error) {
                 console.log(error)
@@ -229,7 +229,7 @@ class PinkRaffle extends React.Component {
                 </p>
                 <p>Raffle Address:<br/>
                     <span className={'address'}>
-                        0xe4AE30D4124EcF4e3297Fa39019a3AFC5130520D
+                        0x95E1B472304f4A07522Ef9B4e2672811F7657B06
                     </span>
                 </p>
                 <br/>

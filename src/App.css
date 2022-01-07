@@ -263,6 +263,18 @@ header {
   line-height: 2em;
 }
 
+#treasury {
+    width: 95%;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    border: 2px black solid;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+    line-height: 2em;
+}
+
 #mintButton {
     width: 100px;
 }
@@ -280,6 +292,10 @@ header {
 
 .address {
   font-size: .65em;
+}
+
+#donateButton {
+  width: 75px;
 }
 
 @media only screen and (min-width: 350px) {
@@ -322,6 +338,10 @@ header {
   }
 
   #mint {
+    font-size: medium;
+  }
+
+  #treasury {
     font-size: medium;
   }
 
