@@ -15,7 +15,7 @@ class Header extends React.Component {
                        data-show-count="false">Follow @RewardPool</a>
                     <br/>
                     <p>Giving away 2 Songbird Bazooka Chicks on Discord! Join Now!</p>
-                    <a href="https://discord.gg/js5ruFtW" target="_blank"  rel="noreferrer">
+                    <a href="https://discord.gg/mZRSRnmeyG" target="_blank"  rel="noreferrer">
                         <img id={'disc'} src={discord} alt={'Discord'} />
                     </a>
                     <p>RewardPool will be releasing open-source protocols that anyone can use
