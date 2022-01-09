@@ -2,7 +2,7 @@ import React from "react"
 import { ethers } from "ethers";
 import TREASURY from '../treasury-abi.json';
 import WNAT from '../wnat-abi.json';
-import pink from '../images/sgbticket.png';
+import pink from '../images/pink-ticket-1.png';
 import $ from "jquery";
 import git from "../images/github.png";
 

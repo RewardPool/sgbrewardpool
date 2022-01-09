@@ -1,5 +1,5 @@
 import React from "react"
-import yellow from '../images/sgbticket-yellow.png'
+import yellow from '../images/yellow-ticket-1.png'
 
 class YellowRaffle extends React.Component {
     render() {

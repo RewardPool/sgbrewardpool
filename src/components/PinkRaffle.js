@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import NFT from '../nft-abi.json';
 import RAFFLE from '../raffle-abi.json';
 import WNAT from '../wnat-abi.json';
-import pink from '../images/sgbticket.png';
+import pink from '../images/pink-ticket-1.png';
 import $ from "jquery";
 
 const NFT_ADDRESS = "0xAD8fC70Af4d8DEC3E80F203Eade3cCeC3dbd5114";

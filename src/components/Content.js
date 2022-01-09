@@ -1,6 +1,6 @@
 import React from "react"
-import pink from '../images/sgbticket.png'
-import yellow from '../images/sgbticket-yellow.png'
+import pink from '../images/pink-ticket-1.png'
+import yellow from '../images/yellow-ticket-1.png'
 import coin from '../images/srp-coin.png'
 import git from '../images/github.png'
 
