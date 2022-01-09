@@ -7,7 +7,7 @@ class Header extends React.Component {
         return (
             <div>
                 <header>
-                    <h1>Songbird RewardPool</h1>
+                    <h1>RewardPool</h1>
                 </header>
                 <div id={'announcement'}>
                     <h2>Coming Soon!</h2>
