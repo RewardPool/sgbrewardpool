@@ -2,7 +2,7 @@ import React from "react"
 import { ethers } from "ethers";
 import TREASURY from '../treasury-abi.json';
 import WNAT from '../wnat-abi.json';
-import pink from '../images/pink-ticket-1.png';
+import pink from '../images/rpool.png';
 import $ from "jquery";
 import git from "../images/github.png";
 
@@ -128,7 +128,7 @@ class Treasury extends React.Component {
                 <br/>
                 <p>Help fund future projects by donating!</p>
                 <br/>
-                <img src={pink} alt={'Songbird Raffle Ticket'} />
+                <img src={pink} alt={'Pink Raffle Ticket'} />
                 <p>Treasury Address:<br/>
                     <span className={'address'}>
                         0xBdf6A975bf0c005c635E90b920A2D5aEEA3c39Aa
