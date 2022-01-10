@@ -1,6 +1,6 @@
 import React from "react"
-import pink from '../images/pink-ticket-1.png'
-import yellow from '../images/yellow-ticket-1.png'
+import pink from '../images/rpool.png'
+import yellow from '../images/rpool-yellow.png'
 import coin from '../images/srp-coin.png'
 import git from '../images/github.png'
 
@@ -10,7 +10,7 @@ const Content = () => {
             <h2>RewardPool Protocols</h2>
             <br/>
             <div className={'protocol'}>
-                <img src={pink} alt={'Songbird Raffle Ticket'} />
+                <img src={pink} alt={'Pink Raffle Ticket'} />
                 <br/>
                 <h3>RewardRaffle Protocol</h3>
                 <br/>
@@ -47,7 +47,7 @@ const Content = () => {
             </div>
             <br/>
             <div className={'protocol'}>
-                <img src={yellow} alt={'Songbird Raffle Ticket'} />
+                <img src={yellow} alt={'Yellow Raffle Ticket'} />
                 <br/>
                 <h3>LosslessRaffle Protocol</h3>
                 <br/>

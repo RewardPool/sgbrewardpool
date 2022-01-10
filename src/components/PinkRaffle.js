@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import NFT from '../nft-abi.json';
 import RAFFLE from '../raffle-abi.json';
 import WNAT from '../wnat-abi.json';
-import pink from '../images/pink-ticket-1.png';
+import pink from '../images/rpool.png';
 import $ from "jquery";
 
 const NFT_ADDRESS = "0xAD8fC70Af4d8DEC3E80F203Eade3cCeC3dbd5114";
@@ -258,7 +258,7 @@ class PinkRaffle extends React.Component {
                 <ul>
                     <li>
                         <div className={'ticket'}>
-                            <img src={pink} className={'raffle'} alt={'Songbird Raffle Ticket'} />
+                            <img src={pink} className={'raffle'} alt={'Pink Raffle Ticket'} />
                             <span>Contract is funded and delegated. The Pink Raffle will be funded by &nbsp;
                                   <a href="https://www.twitter.com/xrpant" target="_blank" rel="noreferrer">@xrpant</a>&nbsp;
                                   with 5,000 SGB.</span>
@@ -267,7 +267,7 @@ class PinkRaffle extends React.Component {
                     <br/>
                     <li>
                         <div className={'ticket'}>
-                            <img src={pink} className={'raffle'} alt={'Songbird Raffle Ticket'} />
+                            <img src={pink} className={'raffle'} alt={'Pink Raffle Ticket'} />
                             <span>Community members can mint one of 500 FREE tickets (1 per address) while they
                                   are still available, only paying for gas.</span>
                         </div>
@@ -275,7 +275,7 @@ class PinkRaffle extends React.Component {
                     <br/>
                     <li>
                         <div className={'ticket'}>
-                            <img src={pink} className={'raffle'} alt={'Songbird Raffle Ticket'} />
+                            <img src={pink} className={'raffle'} alt={'Pink Raffle Ticket'} />
                             <span>Rewards earned from delegating the prize pool each week are given to a
                                   randomly selected ticket holder.</span>
                         </div>
@@ -283,7 +283,7 @@ class PinkRaffle extends React.Component {
                     <br/>
                     <li>
                         <div className={'ticket'}>
-                            <img src={pink} className={'raffle'} alt={'Songbird Raffle Ticket'} />
+                            <img src={pink} className={'raffle'} alt={'Pink Raffle Ticket'} />
                             <span><a href="https://www.twitter.com/xrpant" target="_blank" rel="noreferrer">@xrpant</a>&nbsp;
                                   will at some point in the future (at least 26 weeks) end the raffle
                                   and reclaim his 5,000 SGB.</span>
