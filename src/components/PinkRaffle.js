@@ -8,7 +8,7 @@ import $ from "jquery";
 
 const NFT_ADDRESS = "0xAD8fC70Af4d8DEC3E80F203Eade3cCeC3dbd5114";
 
-const RAFFLE_ADDRESS = "0x95E1B472304f4A07522Ef9B4e2672811F7657B06";
+const RAFFLE_ADDRESS = "0x4956637E9862F8b0739ACA769249070b8490E5c8";
 
 const WNAT_ADDRESS = "0x02f0826ef6aD107Cfc861152B32B52fD11BaB9ED";
 
@@ -229,7 +229,7 @@ class PinkRaffle extends React.Component {
                 </p>
                 <p>Raffle Address:<br/>
                     <span className={'address'}>
-                        0x95E1B472304f4A07522Ef9B4e2672811F7657B06
+                        0x4956637E9862F8b0739ACA769249070b8490E5c8
                     </span>
                 </p>
                 <br/>
