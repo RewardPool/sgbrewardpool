@@ -3,6 +3,8 @@ import { ethers } from "ethers";
 import NFT from '../nft-abi.json';
 import RAFFLE from '../raffle-abi.json';
 import WNAT from '../wnat-abi.json';
+import RMAN from '../rman-abi.json';
+import FMAN from '../fman-abi.json';
 import pink from '../images/rpool.png';
 import $ from "jquery";
 
@@ -11,6 +13,10 @@ const NFT_ADDRESS = "0xAD8fC70Af4d8DEC3E80F203Eade3cCeC3dbd5114";
 const RAFFLE_ADDRESS = "0x4956637E9862F8b0739ACA769249070b8490E5c8";
 
 const WNAT_ADDRESS = "0x02f0826ef6aD107Cfc861152B32B52fD11BaB9ED";
+
+const RMAN_ADDRESS = "0xc5738334b972745067fFa666040fdeADc66Cb925";
+
+const FMAN_ADDRESS = "0xbfA12e4E1411B62EdA8B035d71735667422A6A9e"
 
 class PinkRaffle extends React.Component {
     render() {
@@ -46,6 +52,7 @@ class PinkRaffle extends React.Component {
                 getWinners();
                 getLastReward();
                 getCollectable();
+                getAccrued();
                 $("button#mintButton").prop('disabled', false);
                 $("span#pinkError").text("");
             } else {
@@ -138,6 +145,39 @@ class PinkRaffle extends React.Component {
             lastReward = (lastReward/(10**18)).toFixed(6);
 
             $("span#lastReward").text(`${lastReward}`);
+        }
+
+        const getEpoch = async () => {
+            const { ethereum } = window;
+
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            const connectedContract = new ethers.Contract(FMAN_ADDRESS, FMAN, signer);
+
+            let epoch = await connectedContract.getCurrentRewardEpoch();
+
+            return epoch;
+        }
+
+        const getAccrued = async () => {
+            const { ethereum } = window;
+
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            const connectedContract = new ethers.Contract(RMAN_ADDRESS, RMAN, signer);
+
+            let epoch = await connectedContract.getStateOfRewards(`${RAFFLE_ADDRESS}`,getEpoch());
+            epoch = epoch.toString().split(",");
+
+            let accum = 0;
+
+            if (epoch[2] > 0) {
+                let amt1 = Number(epoch[2]);
+                let amt2 = Number(epoch[3]);
+                let accum = ((amt1 + amt2) / (10 ** 18));
+            }
+
+            $("span#rewardsAccumulated").text(`${accum.toFixed(6)}`);
         }
 
         const getCollectable = async () => {
@@ -250,8 +290,9 @@ class PinkRaffle extends React.Component {
                         </button>
                     </div>
                     <p>Last 5 winning tickets: <span id={'pinkWinners'}></span></p>
-                    <p>Last Reward: <span id={'lastReward'}></span></p>
+                    <p>Last Reward: <span id={'lastReward'}></span> SGB</p>
                     <p>Total WSGB Delegated: <span id={'totalDelegated'}></span></p>
+                    <p>Rewards Accumulated: <span id={'rewardsAccumulated'}></span> SGB</p>
                 </div>
                 <br/>
                 <h3>How it works</h3>
