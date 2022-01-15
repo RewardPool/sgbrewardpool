@@ -53,6 +53,7 @@ class PinkRaffle extends React.Component {
                 getLastReward();
                 getCollectable();
                 getAccrued();
+                checkWhitelist();
                 $("button#mintButton").prop('disabled', false);
                 $("span#pinkError").text("");
             } else {
@@ -75,6 +76,23 @@ class PinkRaffle extends React.Component {
             if (nMinted === 500) {
                 $("button#mintButton").prop('disabled', true);
             }
+        }
+
+        const checkWhitelist = async () => {
+            const { ethereum } = window;
+
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            const connectedContract = new ethers.Contract(NFT_ADDRESS, NFT, signer);
+
+            let whitelistStatus = await connectedContract.isWhitelisted(connectedAccount);
+
+            if (whitelistStatus) {
+                $("span#pinkError").text(`Your address is whitelisted!`);
+            } else {
+                $("span#pinkError").text(`Your address is not whitelisted.`);
+            }
+
         }
 
         const getWnatBalance = async () => {
@@ -174,7 +192,7 @@ class PinkRaffle extends React.Component {
             if (epoch[2] > 0) {
                 let amt1 = Number(epoch[2]);
                 let amt2 = Number(epoch[3]);
-                let accum = ((amt1 + amt2) / (10 ** 18));
+                accum = ((amt1 + amt2) / (10 ** 18));
             }
 
             $("span#rewardsAccumulated").text(`${accum.toFixed(6)}`);
