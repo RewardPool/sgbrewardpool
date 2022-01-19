@@ -53,7 +53,6 @@ class PinkRaffle extends React.Component {
                 getLastReward();
                 getCollectable();
                 getAccrued();
-                checkWhitelist();
                 $("button#mintButton").prop('disabled', false);
                 $("span#pinkError").text("");
             } else {
@@ -77,7 +76,7 @@ class PinkRaffle extends React.Component {
                 $("button#mintButton").prop('disabled', true);
             }
         }
-
+/*
         const checkWhitelist = async () => {
             const { ethereum } = window;
 
@@ -94,7 +93,7 @@ class PinkRaffle extends React.Component {
             }
 
         }
-
+*/
         const getWnatBalance = async () => {
             const { ethereum } = window;
 
