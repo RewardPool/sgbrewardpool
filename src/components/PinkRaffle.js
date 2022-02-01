@@ -266,7 +266,6 @@ class PinkRaffle extends React.Component {
         $(function() {
             $("span#pinkError").text("Connect your wallet and refresh.");
             $("button#mintButton").prop('disabled', true);
-            $("button#claimButton").prop('disabled', true);
             $("div.myTickets").html("<p>You don't own any tickets!</p>");
             $("p#pinkClaimable").text(`0 SGB`);
             checkIfWalletIsConnected();
